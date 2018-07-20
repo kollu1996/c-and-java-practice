@@ -1,0 +1,44 @@
+#include<stdio.h>
+int cmpfunc (const void * a, const void * b);
+int findlargest(int c[100],int i,int l);
+int main()
+{
+ long int a[100000],b[100000],c[100000],i,j,k,l,m;
+ scanf("%ld",&i);
+ scanf("%ld",&j);
+ for(k=0;k<i;k++)
+ {
+  scanf("%ld",&a[k]);
+ }
+ for(k=0;k<i;k++)
+ {
+  scanf("%ld",&b[k]);
+ }
+
+ for(k=0;k<i;k++)
+ {
+  c[k]=(a[k]*a[k])+(b[k]*b[k]);
+ }
+
+ l=i-j+1;
+ m=findlargest(c,i,l);
+ printf("%ld\n",m);
+}
+
+
+int cmpfunc (const void * a, const void * b)
+{
+   return ( *(int*)a - *(int*)b );
+}
+
+int findlargest(int c[],int i,int l)
+{
+
+ qsort(c, i, sizeof(int), cmpfunc);
+
+ return a[i-l];
+}
+
+
+  
+ 

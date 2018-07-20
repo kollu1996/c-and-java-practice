@@ -1,0 +1,37 @@
+#include<stdio.h>
+int main()
+{
+ long int a[100000],i,j,k,k1,p1,p2,p3,i1,k3=0;
+ scanf("%ld",&p2);
+ for(p3=0;p3<p2;p3++)
+{
+ scanf("%ld",&j);
+ scanf("%ld",&k);
+ for(i=0;i<2*j;i++)
+ {
+   a[i]=5000;
+ }
+ for(i=0;i<j;i++)
+{
+  scanf("%ld",&k1);
+  a[k1]=k1;
+}
+for(i1=0;i1<j,k3<k;i1++)
+ {
+    if(a[i1]==5000)
+    {
+    a[i1]=1;
+    k3++;
+    }
+ }
+for(i1=0;i1<2*j;i1++)
+  {
+    if(a[i1]==5000)
+    {
+      printf("%ld\n",i1);
+      break;
+    }
+  }
+k3=0;
+}
+}
